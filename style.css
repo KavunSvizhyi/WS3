@@ -200,7 +200,7 @@ footer span{
         max-width: 100%;
     } 
     .justice-map img{
-        min-width: none;    
+        min-width: 100%;    
     }
     .character{
         display: flex;
@@ -263,4 +263,5 @@ footer span{
         max-width: 50%;
     }
 }
+
 
