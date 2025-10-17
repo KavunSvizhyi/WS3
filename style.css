@@ -1,0 +1,261 @@
+@font-face{
+    src: url(fonts/gotham_medium.otf);
+    font-family: Custom_font;
+}
+body{
+    font-family: "Custom_font", "Consolas", "Times New Roman";     
+    margin: 0;
+}
+
+main{   
+    display: flex;
+}
+.main_info{
+    display: flex;    
+}
+section{      
+    padding-top: 2%;       
+    background-color: #e6d9d5;             
+}
+section div{               
+    padding-inline: 10%;
+}
+section img{    
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    width: 30%;  
+}
+.comic-page{      
+    float: none; 
+    border: 2px solid black;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;    
+}
+.character{
+    margin-top: 5%;
+    background-color: #e9bbab;    
+    border-top: 1px solid black;    
+    border-bottom: 1px solid black;    
+}
+.character img{
+    width: 200px;    
+    float: right;
+    margin-left: 40px; 
+    margin-bottom: 10px;
+}
+.character dt{  
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px; 
+    padding: 2px; 
+    font-weight: bold;   
+}
+.character dd{            
+    margin-bottom: 20px;    
+}
+article{
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;      
+
+    max-width: 478px;    
+    background-color: #242E49;
+}
+.justice-map{
+    display: flex;
+    justify-content: center; 
+
+    box-shadow: 3px 3px rgb(218, 218, 49);
+}
+.justice-map img{
+    width: 100%;    
+}
+.sentence{
+    display: flex;
+    flex-direction: column;
+
+    color: yellow;
+    font-size: 20px;
+    padding: 20px;   
+    box-shadow: 3px 3px rgb(218, 218, 49); 
+}
+.sentence img{
+    width: 100px;
+    height: 100px;
+    box-shadow: 3px 3px 6px rgb(255, 255, 134);
+}
+.quote{
+    display: flex;  
+    gap: 15px;         
+}
+.author{
+    display: flex;
+    flex-direction: row-reverse;
+}
+aside{
+    background-color: #B5182D; 
+    font-size: 15px;
+    color: white;    
+    padding: 2%;  
+}
+.menu{
+    background-color: #242E49;
+    min-width: 15%;
+}
+nav{    
+    display: flex;    
+    flex-direction: column;
+    column-gap: 5px; 
+
+    background-color: #242E49;    
+    width: 100%;    
+    border: 1px double yellow;  
+    border-radius: 15px;  
+    box-shadow: 3px 3px 9px rgb(232, 232, 139);    
+    position: sticky;
+    top: 0;  
+}
+nav a{           
+    overflow: hidden;        
+    padding: 15px;
+    border-radius: 15px;
+    padding-left: 5%;       
+    color: white;          
+    text-decoration: none;            
+}
+nav a:hover{
+    color: yellow;
+    background-color: #39435C;
+    border: 1px pink;    
+}
+nav a:hover::before{
+    content: "⨳ ";   
+}
+nav .current{
+    color: yellow;
+    border: 1px pink;   
+}
+nav .current:hover::before{
+    content: "※ ";    
+}
+nav .current::before{
+    content: "※ ";    
+}
+header{    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow-wrap: break-word; 
+    background-color: #171C30;    
+    padding: 20px;
+}
+.header-title{
+    display: flex;
+    flex-direction: row-reverse;    
+
+    min-width: 50%; 
+    padding-right: 10px;
+    color: #e7db34;            
+    box-shadow: 5px 5px 5px rgb(232, 232, 114);
+    border-radius: 12px;               
+}
+header img{
+    width: 100px;
+}
+footer{
+    display: flex;
+    flex-direction: column;        
+    
+    background-color: #171C30;    
+    padding: 20px;
+}
+footer span{
+    align-self: flex-end;
+
+    color: #e7db34;
+    font-size: xx-small;
+}
+.footer-title{   
+    display: flex;               
+
+    max-width: 25%;      
+    padding-left: 10px;      
+    color: #e7db34;               
+    box-shadow: 5px -5px 5px rgb(232, 232, 114);
+    border-radius: 12px;    
+}
+
+@media(max-width: 800px){
+    main{
+        flex-direction: column-reverse;
+    }    
+    .main_info{
+        flex-direction: column;
+    }
+    article{        
+        max-width: 100%;
+    } 
+    .character{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .character img{
+        float: none;
+    }   
+    nav{
+        flex-direction: row; 
+        justify-content: space-evenly;               
+    }
+    nav a{
+        color: transparent;
+        flex: 1;
+        width: 1em;        
+        background-size: cover;
+        background-position: center;
+    } 
+    .Overview{
+        background-image: url("images/icons/JL-icon.webp");
+    }
+    .Batman{
+        background-image: url("images/icons/batman-icon.webp");
+    }
+    .Superman{
+        background-image: url("images/icons/superman-icon.webp");
+    }
+    .Flash{
+        background-image: url("images/icons/flash-icon.webp");
+    }
+    .GreenLantern{
+        background-image: url("images/icons/green_lantern.webp");
+    }
+    .Martian{
+        background-image: url("images/icons/martian-icon.webp");
+    }
+    .WonderWoman{
+        background-image: url("images/icons/wonder_woman-icon.webp");
+    }
+    nav a:hover{
+        color: transparent;
+        box-shadow: 3px 3px 3px rgb(250, 250, 216);
+    }
+    nav .current{
+        color: transparent;
+        box-shadow: 3px 3px 3px rgb(250, 250, 216);
+    }
+    nav a:hover::before{
+        content: "";   
+    }    
+    nav .current:hover::before{
+        content: "";    
+    }
+    nav .current::before{
+        content: "";    
+    }
+    .footer-title{
+        max-width: 50%;
+    }
+}
